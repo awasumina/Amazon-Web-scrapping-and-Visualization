@@ -1,0 +1,9 @@
+fact_reviews
+  - review_id (PK)
+  - product_id (FK)
+  - rating
+
+dim_products
+  - product_id (PK)
+  - title
+  - price

@@ -1,0 +1,5 @@
+Selenium fetches the webpage and runs JavaScript if needed, but it doesn’t provide easy tools to extract info from HTML. BeautifulSoup is perfect for parsing HTML and lets you use CSS selectors, tags, classes, etc., to find what you need.
+Selenium → loads the page and gets raw HTML.
+BeautifulSoup → parses that HTML so you can extract data like product titles, prices, etc.
+
+so, we use both selenium and beautiful soup
