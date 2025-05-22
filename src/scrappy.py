@@ -120,9 +120,23 @@ def scrape_amazon_product(query, max_pages=2):
     print(f"Total products scraped: {len(all_products)}")
     return all_products
 
-if __name__ == "__main__":
-    query = "desktop"
-    data = scrape_amazon_product(query)
+# Top of file stays the same
+
+def scrape_amazon_products():
+    queries = ["laptop", "desktop", "smartwatch", "tablet", "keyboard"]
     os.makedirs("data", exist_ok=True)
-    with open("data/products_desktop.json", "w") as f:
-        json.dump(data, f, indent=4)
+
+    for query in queries:
+        print(f"Scraping products for: {query}")
+        data = scrape_amazon_product(query)
+        file_path = f"data/products_{query}.json"
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=4)
+
+
+# if __name__ == "__main__":
+#     query = "desktop"
+#     data = scrape_amazon_product(query)
+#     os.makedirs("data", exist_ok=True)
+#     with open("data/products_desktop.json", "w") as f:
+#         json.dump(data, f, indent=4)
