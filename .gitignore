@@ -2,3 +2,9 @@
 **/superset/
 NOTE.txt
 workflow.txt
+docker-compose.yml
+**/config/
+**/venv/
+airflow dag.png
+**/config/**
+**/superset/**

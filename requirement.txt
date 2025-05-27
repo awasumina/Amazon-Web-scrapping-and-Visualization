@@ -1,0 +1,6 @@
+pandas
+textblob
+sqlalchemy
+beautifulsoup4
+selenium
+minio

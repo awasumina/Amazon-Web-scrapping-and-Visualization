@@ -2,9 +2,9 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 from datetime import datetime
-from scrappy import scrape_amazon_products
-from transform import clean_transform_data
-from postgresLoader import load_to_postgres
+from src.scrappy import scrape_amazon_products
+from src.transform import clean_transform_data
+from src.postgresLoader import load_to_postgres
 
 with DAG("amazon_pipeline", start_date=datetime(2025, 5, 22), schedule_interval="@daily", catchup=False) as dag:
     t1 = PythonOperator(task_id="scrape", python_callable=scrape_amazon_products)
